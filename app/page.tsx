@@ -1,94 +1,33 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Image from "next/image"
+import daisyHeadshot from './assets/images/daisy_headshot.jpg';
+import abnerHeadshot from './assets/images/abner_headshot.jpg';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <div className={styles.homepageContainer}>
+          <div className={styles.intro}>
+            <h2 className={styles.introTitle}>Welcome to the Kitty Corral,</h2>
+            <p className={styles.introText}>Your city's premiere western themed cat coffee bar. You'll be the sheriff to outlaw cats, whose lawless behave will make your coffee a pain to drink.</p>
+            <p className={styles.introText}>If you feel the call of the west, a harkening back of a less civilized time where no one's coffee cup is safe from roaming paws, feel free to mosey on up to our bar, pardner.</p>
+            <br></br>
+            <a href="/menu" className={`${styles.button} ${styles.buttonLink}`}>View Menu</a>
+          </div>
+          <div className={styles.columnTwo}>
+              <div className={styles.catIntro}>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                <div className={`${styles.catOne} ${styles.catBox}`}>
+                <h2 className={styles.introTitle}> Meet Daisy Mae </h2>
+                <Image src={daisyHeadshot} className={styles.catImage} alt="Daisy May"/> </div>
+                <div className={`${styles.catTwo} ${styles.catBox}`}>
+                  <h2  className={styles.introTitle}> Meet Little Abner</h2>
+                  <Image src={abnerHeadshot} className={styles.catImage} alt="Little Abner"/> 
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+                </div>
+              </div>
+              <div className={styles.nowHiring}><button className={styles.button}>Now Hiring</button></div>
+          </div>
       </div>
     </main>
   );
