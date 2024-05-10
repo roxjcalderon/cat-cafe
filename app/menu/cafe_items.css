@@ -1,0 +1,37 @@
+.menuPage { 
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    
+    width: 50%;
+    border: 3px solid var(--orange);
+    border-radius: 10px;
+    background-color: var(--light-pink);
+    justify-content: center;
+    font-family: "Noto Sans", serif;
+}
+
+.menu { 
+    display: inline;
+}
+
+.categories { 
+    margin-left: 0;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.individualItem { 
+    display: flex;
+    padding-left: 5px;
+}
+
+.itemDescription { 
+    font-weight: bolder;
+}
+
+.variant {
+    padding-right: 10px; 
+}
